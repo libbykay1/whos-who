@@ -1,0 +1,36 @@
+<div *ngIf="authLoading || configLoading">Loading...</div>
+<div *ngIf="!authLoading && !configLoading" class="container">
+  <div>
+  <h1>Welcome to Who's Who</h1>
+  <form class="form-box" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+<label for="genre">Choose Genre </label>
+  <select [(ngModel)]="selectedGenre" (ngModelChange)="setGenre($event)" name="genre" class="input-style">
+    <option disabled [value]="null" selected></option>
+    <option [value]="genre" *ngFor="let genre of genres">
+      {{ genre }}
+    </option>
+  </select></div>
+  <div class="form-row">
+  <label for="artists">Choose No. of Artist Options</label>
+  <select [(ngModel)]="artists" (ngModelChange)="setArtists($event)" name="artists" class="input-style">
+    <option disabled [value]="null" selected></option>
+    <option value=3>3</option>
+    <option value=4>4</option>
+    <option value=5>5</option>
+  </select></div>
+  <div class="form-row">
+    <label for="mode">Choose Game Mode</label>
+    <select [(ngModel)]="mode" (ngModelChange)="setMode($event)" name="mode" class="input-style">
+      <option disabled [value]="null" selected></option>
+      <option value="easy">Easy</option>
+      <option value="hard">Hard</option>
+    </select></div>
+    <button class="submit-button">Play Game</button>
+</form>
+<div>
+  <button class="link-button" routerLink="/leaderboard" text="Leaderboard">Leaderboard</button>
+
+</div>
+</div>
+</div>

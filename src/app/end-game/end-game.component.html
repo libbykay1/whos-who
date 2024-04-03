@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>{{ resultMessage }}</h1>
+    <p>Your score is {{ score }}/5</p>
+    <div *ngIf="showForm" class="input-container">
+        <input type="text" [(ngModel)]="playerName" placeholder="Enter your name" />
+        <button class="submit-button" (click)="submitName(playerName)">Submit</button>
+    </div>
+    <div *ngIf="!showForm" class="submitted-message">Submitted to Leaderboard ✔</div>
+    <div>
+        <button class="big-button" (click)="playAgain()">Play Again!</button>
+    </div>
+    <div class="button-container">
+        <button class="link-button" routerLink="/leaderboard">Leaderboard</button>
+        <button class="link-button" routerLink="/home">Home</button>
+    </div>
+</div>

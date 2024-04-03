@@ -1,0 +1,46 @@
+.leaderboard-container {
+    background-color: #1DB954;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    padding: 20px 50px;
+    text-align: center;
+    font-size: 1.5em;
+    color: black;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    margin: 8% 27%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 5px 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button-container button {
+    width: 100%;
+    max-width: 200px;
+    height: 40px;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 1.25em;
+}
+
+.button-container button:hover {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+}
